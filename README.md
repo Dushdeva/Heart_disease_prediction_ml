@@ -1,4 +1,3 @@
-```Markdown
 # Heart Disease Prediction System
 
 ## Overview
