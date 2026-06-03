@@ -1,85 +1,44 @@
+```Markdown
 # Heart Disease Prediction System
 
 ## Overview
-
-The Heart Disease Prediction System is a project that uses machine learning to figure out if someone is likely to have heart disease. This project was made using Python. The goal of the Heart Disease Prediction System is to use health information to predict whether a patient is likely to have heart disease.
-
-The Heart Disease Prediction System shows how to do the machine learning process. This includes cleaning up the data looking at the data training a model and checking how well the model works.
+This project is a Python-based machine learning pipeline that analyzes patient health data to predict the likelihood of heart disease. Using a Logistic Regression framework, the system processes patient metrics, evaluates model performance, and automatically exports visual and textual diagnostic reports.
 
 ## Features
-
-* The Heart Disease Prediction System cleans up the data. Makes sure it is okay to use.
-
-* The Heart Disease Prediction System looks at the data to understand it better.
-
-* The Heart Disease Prediction System uses graphs to show the data.
-
-* The Heart Disease Prediction System trains a machine learning model.
-
-* The Heart Disease Prediction System uses data to predict whether someone is likely to have heart disease.
-
-* The Heart Disease Prediction System checks how well the model works.
+* **Automated Data Pipeline:** Loads and validates data shapes, checking for missing values automatically.
+* **Exploratory Data Analysis (EDA):** Generates and saves target distribution plots and feature correlation heatmaps.
+* **Reproducible Splits:** Utilizes stratified sampling ($80/20$ split) with a fixed random state to ensure consistent training evaluation.
+* **Automated Reporting:** Generates a comprehensive evaluation summary (`report.txt`) alongside visual confusion matrices.
+* **Model Serialization:** Saves the trained Logistic Regression model as a `.pkl` file for future deployment.
 
 ## Technologies Used
+* **Language:** Python
+* **Data Libraries:** Pandas, NumPy
+* **Visualization:** Matplotlib, Seaborn
+* **Machine Learning:** Scikit-learn (Logistic Regression)
+* **Model Persistence:** Joblib
 
-* The project uses Python.
+## Dataset Structure
+The system processes `dataset/heart.csv`, utilizing key medical features including:
+* Age & Biological Sex
+* Chest Pain Type
+* Resting Blood Pressure & Cholesterol Levels
+* Fasting Blood Sugar
+* Maximum Heart Rate Achieved
 
-* The project uses Pandas.
-
-* The project uses NumPy.
-
-* The project uses Matplotlib.
-
-* The project uses Seaborn.
-
-* The project uses Scikit-learn.
-
-* The project uses Jupyter Notebook.
-
-## Dataset
-
-The Heart Disease Prediction System uses a dataset that has information about peoples health. This dataset has things like:
-
-* How old someone is
-
-* Whether someone is a man or a woman
-
-* What someones cholesterol level is
-
-* What someones blood pressure is
-
-* What someones maximum heart rate is
-
-* What kind of chest pain someone has
-
-* What someones blood sugar level is
-
-## Machine Learning Process
-
-1. The Heart Disease Prediction System loads the dataset. Cleans it up.
-
-2. The Heart Disease Prediction System looks at the data to understand it better.
-
-3. The Heart Disease Prediction System splits the dataset into two parts: one for training and one for testing.
-
-4. The Heart Disease Prediction System trains a machine learning model.
-
-5. The Heart Disease Prediction System checks how well the model works.
-
-6. The Heart Disease Prediction System uses the model to predict whether someone is likely to have heart disease.
-
-## Results
-
-The model was checked using things like:
-
-* How accurate it was
-
-* A confusion matrix
-
-* How precise it was
-
-* How good it was at remembering things
-
+## Project Directory Layout
+Once executed, the project establishes the following structure:
+```text
+├── dataset/
+│   └── heart.csv                 # Required input data
+├── heart_disease_prediction.ipynb # Core execution notebook
+└── Report/                       # Generated automatically on runtime
+    ├── target_distribution.png
+    ├── correlation_heatmap.png
+    ├── confusion_matrix.png
+    ├── report.txt                # Plain-text evaluation summary
+    └── heart_disease_model.pkl   # Saved Logistic Regression model
+```
 ## Learning Outcomes
 
 I learned a lot from working on the Heart Disease Prediction System. I got experience with:
