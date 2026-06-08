@@ -1,0 +1,15 @@
+HEART DISEASE PREDICTION REPORT
+==================================================
+
+Dataset Shape: (289, 14)
+Model Accuracy: 82.76%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.86      0.72      0.78        25
+           1       0.81      0.91      0.86        33
+
+    accuracy                           0.83        58
+   macro avg       0.83      0.81      0.82        58
+weighted avg       0.83      0.83      0.83        58
